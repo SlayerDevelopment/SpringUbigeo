@@ -26,10 +26,11 @@ targetCompatibility = 1.8
 
 bootJar {
     baseName = 'SpringUbigeo'
-    version =  '0.0.1'
+    version =  '0.0.2'
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    testCompile("junit:junit")	
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.0.RELEASE'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.1.0.RELEASE'
+	runtime group: 'com.h2database', name: 'h2', version: '1.4.200'
 }
